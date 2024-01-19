@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: php:apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./your-code-directory:/var/www/html
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: HzmSlm_11
+      MYSQL_DATABASE: Evently_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: EventlyHzmSlm_11
+    ports:
+      - "3306:3306"
